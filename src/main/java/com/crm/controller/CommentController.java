@@ -23,6 +23,8 @@ public class CommentController {
             @RequestParam long postId
             )
     {
+        System.out.println("1000");
+        System.out.println("2000");
         Post post = postRepository.findById(postId).get();
         comments.setPost(post);
         commentsRepository.save(comments);
